@@ -20,7 +20,7 @@
     position:sticky; /* ---------------------------------- Mantém o elemento "grudado" no topo ao rolar a página */
     top: 0; /* ------------------------------------------------------ Define que ele ficará colado a 0px do topo */
 
-    background-color: #34d1e3a9; /* --------------- Cor de fundo com transparência (últimos 2 dígitos = alpha) */
+    background-color: #43e334a9; /* --------------- Cor de fundo com transparência (últimos 2 dígitos = alpha) */
     backdrop-filter: blur(2px); /* --------------------------------------------------- efeito moderno tipo vidro */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* -------------- Adiciona sombra para dar efeito de elevação */
     border-radius: 0 0 30px 30px; /* ---------------------------------------------- Arredonda os cantos da barra */
