@@ -1,92 +1,162 @@
-<!DOCTYPE html> 
-<html lang = 'pt-br'>
-    <head>
-        <meta charset = 'UTF-8'>
-        <title> Teste Projeto CC </title>
-        <link rel = 'stylesheet' href = 'css/estilo_projeto.css'> </rel>
-        <script type = 'text/javascript' src = 'js/script_projeto.js'> </script>
-        <link href = "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel = 'stylesheet'>
-    </head>
-    <body class = 'body_project'>
-        
-        <!-- Topo da página ( inclui o menu lateral, o título e o botao de ajuda) -->
-        <header class = 'topo'>
-            
-            <!-- Menu lateral -->
-            <div class = 'menu_lateral'> 
-                <p> testando </p>
-                <nav class = "nav_lateral">
-                    <ul>
-                        <li class = 'nav-item'><a href="index.html"> Inicio </a></li>
-                        <li class = 'nav-item'><a href="paginas/conceitos.html"> Conceitos </a></li>
-                        <li class = 'nav-item'><a href="paginas/aplicacao.html"> Aplicação </a></li>
-                        <li class = 'nav-item'><a href="paginas/simulador.html"> Simulador </a></li>
-                    </ul>
-                </nav>
-            </div><!-- Fim do menu lateral -->
-            
-            <!-- Título da página  -->
-            <div class = 'titulo'>
-                <h1> Energia</h1><h2>&</h2> <h1>Calor </h1>              
-            </div>            
-            <!-- Botão de ajuda -->
-            <div class = 'ajuda'> 
-                <p> ? </p>
-            </div><!-- Fim do botão de ajuda -->   
-            
-        </header><!-- Fim do topo da página -->
-        
-        <hr color = 'black' size = '3px' width = '100%'>
-        
-        <!-- Conteúdo da página -->
-        <main class = 'main_project'>
-            
-            <!-- Menu central -->
-            <div class = 'menu_central'>
-                <nav>
-                    <ul>
-                        <li><a href="index.html"> Inicio </a></li>
-                        <li><a href="paginas/conceitos.html"> Conceitos </a></li>
-                        <li><a href="paginas/aplicacao.html"> Aplicação </a></li>
-                        <li><a href="paginas/simulador.html"> Simulador </a></li>
-                    </ul>
-                </nav>
-            </div><!-- Fim do menu central -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Define o viewport para responsividade -->
+    <title>Energia Térmica</title>
+    <link rel="stylesheet" href="css/style.css"><!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌡️ Energia Térmica</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('inicio')">🏠 Início</a></li>
+                <li><a href="#" onclick="showSection('conceitos')">📚 Conceitos</a></li>
+                <li><a href="#" onclick="showSection('aplicacao')">🧪 Aplicações</a></li>
+                <li><a href="#" onclick="showSection('simulador')">💻 Simulador</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <hr color = 'red' size = '3px' width = '100%'>
-        </main><!-- Fim do conteúdo da página -->
+    <!-- Botão de Informações -->
+    <button class="info-btn" onclick="toggleInfo()">👨‍💻 Info</button>
 
-        <hr color = 'black' size = '3px' width = '100%'>
-    <div class ="cabecario">
-        <h1>Energia termica, informações e curiosidades</h1>
-        <p> A energia térmica é a energia interna de um sistema
-        devido ao movimento aleatório de suas partículas. Ela é 
-        uma forma de energia que pode ser transferida entre 
-        objetos ou sistemas através do calor. A energia térmica 
-        é fundamental para muitos processos naturais e 
-        tecnológicos, como a transferência de calor, a geração 
-        de eletricidade e a manutenção da temperatura em 
-        ambientes controlados. Curiosidades sobre a energia 
-        térmica incluem o fato de que ela pode ser convertida em 
-        outras formas de energia, como a energia cinética, e que 
-        é uma das formas mais comuns de energia utilizada no 
-        nosso dia a dia, desde o aquecimento de nossas casas até 
-        o funcionamento de nossos aparelhos eletrônicos. </p>
-        
+    <!-- Modal de Informações -->
+    <div id="infoModal" class="info-modal">
+        <div class="info-content">
+            <span class="close-info" onclick="toggleInfo()">&times;</span>
+            <h2>👨‍💻 Criadores</h2>
+            <p><strong>Desenvolvedores:</strong> <br> 
+            Amanda silva galdino <br> 
+            Marlon marcos gama <br> 
+            Matheus do nascimento garcia <br> 
+            Murilo guimarães rodrigues da silva <br> 
+            Ulisses daniel teixeira de oliveira </p>
+            <p><strong>Objetivo:</strong> 
+                Educar sobre energia térmica de forma interativa</p>
+            <p><strong>Data:</strong> 25/02/2026</p>
+            <p>Um projeto educativo para tornar a física divertida! 🚀</p>
+        </div>
     </div>
-     <hr color = 'black' size = '3px' width = '100%'>
-     <!--
-     <article>
-        <ul>
-            <li>
-                <a href ='https://www.unip.br/' target="_blank"> <img src = "imagens/unip.jpg" width="200"></a>
-                <a href ='https://www.uol.com.br/' target="_blank"> <img src = "imagens/uol.png" width="200"></a>
-                <a href ='https://www.nasa.gov/' target="_blank"> <img src = "imagens/nasa.jpg" width="200"></a>
-                <a href ='https://g1.globo.com/' target="_blank"> <img src = "imagens/g1.png" width="200"></a>
-                <a href ='https://www.cnnbrasil.com.br/' target="_blank"> <img src = "imagens/cnn.png" width="200"></a>
-            </li>
-        </ul>
-    </article> -->
-    </body>
-</html>
 
+    <main>
+        <!-- Página Início -->
+        <section id="inicio" class="section active">
+            <div class="hero">
+                <h1>🌡️ Energia Térmica</h1>
+                <p class="hero-text">
+                    A <strong>energia térmica</strong> é a energia associada ao movimento das partículas de um corpo. 
+                    Quanto mais rápido as partículas se movem, maior a temperatura. Este site foi criado para 
+                    <strong>ensinar os conceitos fundamentais da termodinâmica</strong> de forma prática e interativa, 
+                    permitindo que você entenda e experimente os princípios da energia térmica em casa!
+                </p>
+            </div>
+
+            <h2>📚 Conceitos Fundamentais</h2>
+            <div class="grid1">
+                <div class="concept-card">
+                    <h3>🔥 Temperatura</h3>
+                    <p>Medida da energia cinética média das partículas. Unidades: Celsius (°C), Kelvin (K), Fahrenheit (°F).</p>
+                </div>
+                <div class="concept-card">
+                    <h3>🌡️ Calor</h3>
+                    <p>Transferência de energia térmica entre corpos devido a diferença de temperatura.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>💧 Capacidade Calorífica</h3>
+                    <p>Quantidade de calor necessária para elevar 1°C da temperatura de 1g de uma substância.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>🔄 Dilatação Térmica</h3>
+                    <p>Aumento de volume dos corpos quando aquecidos.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>📈 Ponto de Fusão/Ebulição</h3>
+                    <p>Temperaturas nas quais ocorrem mudanças de estado (sólido↔líquido↔gasoso).</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Página Conceitos -->
+        <section id="conceitos" class="section">
+            <h2>📚 Conceitos Fundamentais</h2>
+            <div class="grid2">
+                <div class="concept-card">
+                    <h3>🔥 Temperatura</h3>
+                    <p>Medida da energia cinética média das partículas. Unidades: Celsius (°C), Kelvin (K), Fahrenheit (°F).</p>
+                </div>
+                <div class="concept-card">
+                    <h3>🌡️ Calor</h3>
+                    <p>Transferência de energia térmica entre corpos devido a diferença de temperatura.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>💧 Capacidade Calorífica</h3>
+                    <p>Quantidade de calor necessária para elevar 1°C da temperatura de 1g de uma substância.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>🔄 Dilatação Térmica</h3>
+                    <p>Aumento de volume dos corpos quando aquecidos.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>📈 Ponto de Fusão/Ebulição</h3>
+                    <p>Temperaturas nas quais ocorrem mudanças de estado (sólido↔líquido↔gasoso).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Aplicações -->
+        <section id="aplicacao" class="section">
+            <h2>🧪 5 Experimentos para Testar em Casa</h2>
+            <div class="grid">
+                <div class="experiment-card" onclick="goToSimulator(1)">
+                    <h3>1. Água Quente vs Fria</h3>
+                    <p>Misture água quente e fria em copos iguais. Meça as temperaturas finais.</p>
+                    <button class="btn">🔗 Ver Simulador</button>
+                </div>
+                <div class="experiment-card" onclick="goToSimulator(2)">
+                    <h3>2. Metal Quente na Água</h3>
+                    <p>Coloque um prego quente em água fria. Observe a troca de calor.</p>
+                    <button class="btn">🔗 Ver Simulador</button>
+                </div>
+                <div class="experiment-card" onclick="goToSimulator(3)">
+                    <h3>3. Gelo Derretendo</h3>
+                    <p>Meça quanto calor é necessário para derreter gelo.</p>
+                    <button class="btn">🔗 Ver Simulador</button>
+                </div>
+                <div class="experiment-card" onclick="goToSimulator(4)">
+                    <h3>4. Dilatação da Água</h3>
+                    <p>Observe como a água se expande quando aquecida.</p>
+                    <button class="btn">🔗 Ver Simulador</button>
+                </div>
+                <div class="experiment-card" onclick="goToSimulator(5)">
+                    <h3>5. Isolamento Térmico</h3>
+                    <p>Compare copos com e sem isolamento. Qual mantém a temperatura?</p>
+                    <button class="btn">🔗 Ver Simulador</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Simulador -->
+        <section id="simulador" class="section">
+            <h2>💻 Simulador Interativo</h2>
+            <div id="simulator-content">
+                <div class="simulator-placeholder">
+                    <h3>Selecione um experimento na página anterior ou use os controles abaixo</h3>
+                    <div class="controls">
+                        <button class="btn" onclick="showExperiment(1)">Experimento 1</button>
+                        <button class="btn" onclick="showExperiment(2)">Experimento 2</button>
+                        <button class="btn" onclick="showExperiment(3)">Experimento 3</button>
+                        <button class="btn" onclick="showExperiment(4)">Experimento 4</button>
+                        <button class="btn" onclick="showExperiment(5)">Experimento 5</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script><!-- Link para o arquivo JavaScript -->
+</body>
+</html>
