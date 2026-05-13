@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     color: #333;
     background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
     min-height: 100vh;
+    
 
 }
 /** -- Estilos para a barra de navegação ----- */
@@ -28,6 +30,8 @@ body {
 
 .nav-container {
     max-width: 1200px;
+    min-width: 980px;
+    margin: 0px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -52,6 +56,7 @@ body {
 }
 
 .nav-links a {
+    
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -79,7 +84,7 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     z-index: 1001;
     cursor: none;
@@ -190,19 +195,59 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    align-items: start;
+    
 }
 
-.concept-card, .experiment-card {
+
+/* Estilos para os cards de conceitos*/
+
+.concept-card{
+position: relative;
+
     background: white;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    
 }
+/* Conteudo escondido dos cards*/
+.extra-content {
+    max-height: 0; /* Esconde o conteúdo */
+    overflow: hidden; /* Esconde o conteúdo extra */
+    opacity: 0; /* Deixa o conteúdo invisível */
+    transition:
+        max-height 0.5s ease,
+        opacity 0.3s ease;
+        cursor:default;
+}
+
+.concept-card.on .extra-content {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 1rem;
+   
+}
+
+
+
 
 .concept-card:hover {
     transform: translateY(-5px);
+}
+
+.experiment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    
 }
 
 .experiment-card {

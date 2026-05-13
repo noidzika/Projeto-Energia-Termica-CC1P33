@@ -12,6 +12,20 @@ function toggleInfo() {
     const modal = document.getElementById('infoModal');
     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
 }
+// Expandir conteudo extra dos cards de conceitos
+function toggleCard(card) {
+    document.querySelectorAll('.concept-card')
+        .forEach(item => {
+
+            if(item !== card) {
+                item.classList.remove('on');
+            }
+
+        });
+    card.classList.toggle('on');
+}
+
+
 
 // Ir para simulador com experimento específico
 function goToSimulator(experimentId) {
