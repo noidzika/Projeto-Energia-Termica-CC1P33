@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
     
     min-height: 100vh;
-    min-width: 600px;
 }
 
 /** -- Estilos para a barra de navegação ----- */
@@ -325,5 +324,192 @@ main {
     .nav-links {
         gap: 1px;
         
+    }
+}
+/* ========================= */
+/* RESPONSIVIDADE TABLETS */
+/* ========================= */
+
+@media screen and (max-width: 900px) {
+
+    body {
+        min-width: 100%;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .section {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-card,
+    .experiment-card {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVIDADE CELULARES */
+/* ========================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 1rem;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        padding: 0.4rem 0.7rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    /* CONTEÚDO */
+
+    main {
+        margin-top: 140px;
+        padding: 0.8rem;
+    }
+
+    .section {
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        border-radius: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* CARDS */
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .concept-card,
+    .experiment-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .concept-card h3,
+    .experiment-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .extra-content {
+        padding: 1rem;
+    }
+
+    /* BOTÃO INFO */
+
+    .info-btn {
+        right: 15px;
+        bottom: 15px;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* MODAL */
+
+    .info-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 1.5rem;
+    }
+}
+
+/* ========================= */
+/* CELULARES MUITO PEQUENOS */
+/* ========================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .concept-card h3,
+    .experiment-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .hero-text,
+    .concept-card p,
+    .experiment-card p {
+        font-size: 0.9rem;
     }
 }
