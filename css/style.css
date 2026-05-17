@@ -199,7 +199,7 @@ main {
     align-items: start;   
 }
 /* Estilos para os cards de conceitos*/
-.concept-card{
+.conceitos-card{
     position: relative;
     z-index: 1;
     
@@ -212,11 +212,11 @@ main {
     transition: all 0.3s ease;
     cursor: pointer;   
 }
-.concept-card:hover {
+.conceitos-card:hover {
     transform: scale(1.05);
 }
 /* Conteudo escondido dos cards*/
-.extra-content {    
+.conteudo-extra {    
     position: absolute;
     top: 100%; /* aparece logo abaixo do card */
     left: 0;
@@ -237,19 +237,19 @@ main {
         opacity 0.3s ease;
     cursor:default;
 }
-.concept-card.on .extra-content {
+.conceitos-card.on .conteudo-extra {
     opacity: 1;
     padding: 1rem 2rem;     
     max-height: 500px;
 }
-.concept-card.on{
+.conceitos-card.on{
     z-index: 100; /* ← fica por cima dos outros cards */
     border-radius: 15px 15px 0 0; /* Remove o arredondamento inferior do card */
     }
-.concept-card.on .concept-card:hover {
+.conceitos-card.on .conceitos-card:hover {
     transform: none; /* Desativa o efeito de hover quando o conteúdo extra está visível */
 }
-.experiment-card {
+.aplicacao-card {
     background: white;
     padding: 2rem;
     border-radius: 15px;
@@ -259,16 +259,16 @@ main {
     
 }
 
-.experiment-card {
+.aplicacao-card {
     cursor: pointer;
 }
 
-.experiment-card:hover {
+.aplicacao-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-.concept-card h3, .experiment-card h3 {
+.conceitos-card h3, .aplicacao-card h3 {
     color: #1f3b46;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -360,8 +360,8 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .concept-card,
-    .experiment-card {
+    .conceitos-card,
+    .aplicacao-card {
         width: 100%;
     }
 }
@@ -448,17 +448,17 @@ main {
         gap: 1rem;
     }
 
-    .concept-card,
-    .experiment-card {
+    .conceitos-card,
+    .aplicacao-card {
         padding: 1.5rem 1rem;
     }
 
-    .concept-card h3,
-    .experiment-card h3 {
+    .conceitos-card h3,
+    .aplicacao-card h3 {
         font-size: 1.3rem;
     }
 
-    .extra-content {
+    .conteudo-extra {
         padding: 1rem;
     }
 
@@ -502,14 +502,14 @@ main {
         font-size: 0.8rem;
     }
 
-    .concept-card h3,
-    .experiment-card h3 {
+    .conceitos-card h3,
+    .aplicacao-card h3 {
         font-size: 1.1rem;
     }
 
     .hero-text,
-    .concept-card p,
-    .experiment-card p {
+    .conceitos-card p,
+    .aplicacao-card p {
         font-size: 0.9rem;
     }
 }

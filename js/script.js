@@ -26,7 +26,7 @@ function toggleInfo() {
 // Expandir conteúdo extra dos cards
 function toggleCard(card) {
 
-    document.querySelectorAll('.concept-card')
+    document.querySelectorAll('.conceitos-card')
         .forEach(item => {
 
             if (item !== card) {
