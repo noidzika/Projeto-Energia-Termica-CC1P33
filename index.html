@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Define o viewport para responsividade -->
     <title>Energia Térmica</title>
     <link rel="stylesheet" href="css/style.css"><!-- Link para o arquivo CSS -->
+    <script src="js/script.js"></script> <!-- Link para o arquivo JavaScript -->
 </head>
 <body>
     <!-- Navbar -->
@@ -145,36 +146,51 @@
         </section>
 
         <!-- Página Aplicações -->
-        <section id="aplicacao" class="section">
-            <h2>🧪 5 Experimentos para Testar em Casa</h2>
-            <div class="grid">
-                <div class="experiment-card" onclick="goToSimulator(1)">
-                    <h3>1. Água Quente vs Fria</h3>
-                    <p>Misture água quente e fria em copos iguais. Meça as temperaturas finais.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
-                </div>
-                <div class="experiment-card" onclick="goToSimulator(2)">
-                    <h3>2. Metal Quente na Água</h3>
-                    <p>Coloque um prego quente em água fria. Observe a troca de calor.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
-                </div>
-                <div class="experiment-card" onclick="goToSimulator(3)">
-                    <h3>3. Gelo Derretendo</h3>
-                    <p>Meça quanto calor é necessário para derreter gelo.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
-                </div>
-                <div class="experiment-card" onclick="goToSimulator(4)">
-                    <h3>4. Dilatação da Água</h3>
-                    <p>Observe como a água se expande quando aquecida.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
-                </div>
-                <div class="experiment-card" onclick="goToSimulator(5)">
-                    <h3>5. Isolamento Térmico</h3>
-                    <p>Compare copos com e sem isolamento. Qual mantém a temperatura?</p>
-                    <button class="btn">🔗 Ver Simulador</button>
-                </div>
-            </div>
-        </section>
+<section id="aplicacao" class="section">
+    <h2>🧪 5 Experimentos para Testar em Casa</h2>
+
+    <div class="grid">
+
+        <div class="experiment-card">
+            <h3>1. Água Quente vs Fria</h3>
+            <p>
+                Misture água quente e fria em copos iguais.
+                Meça as temperaturas finais.
+            </p>
+        </div>
+
+        <div class="experiment-card">
+            <h3>2. Metal Quente na Água</h3>
+            <p>
+                Coloque um prego quente em água fria.
+                Observe a troca de calor.
+            </p>
+        </div>
+
+        <div class="experiment-card">
+            <h3>3. Gelo Derretendo</h3>
+            <p>
+                Meça quanto calor é necessário para derreter gelo.
+            </p>
+        </div>
+
+        <div class="experiment-card">
+            <h3>4. Dilatação da Água</h3>
+            <p>
+                Observe como a água se expande quando aquecida.
+            </p>
+        </div>
+
+        <div class="experiment-card">
+            <h3>5. Isolamento Térmico</h3>
+            <p>
+                Compare copos com e sem isolamento.
+                Qual mantém a temperatura?
+            </p>
+        </div>
+
+    </div>
+</section>
 
         <!-- Página Simulador 
         <section id="simulador" class="section">
@@ -194,6 +210,6 @@
         </section>-->
     </main>
 
-    <script src="js/script.js"></script> Link para o arquivo JavaScript 
+     
 </body>
 </html>
