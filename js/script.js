@@ -26,7 +26,7 @@ function toggleInfo() {
 // Expandir conteúdo extra dos cards
 function toggleCard(card) {
 
-    document.querySelectorAll('.conceitos-card')
+    document.querySelectorAll('.concept-card')
         .forEach(item => {
 
             if (item !== card) {
@@ -36,4 +36,18 @@ function toggleCard(card) {
         });
 
     card.classList.toggle('on');
+}
+// Expandir cards de aplicação
+function toggleExperiment(card) {
+
+    document.querySelectorAll('.experiment-card')
+        .forEach(item => {
+
+            if (item !== card) {
+                item.classList.remove('open');
+            }
+
+        });
+
+    card.classList.toggle('open');
 }
