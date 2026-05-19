@@ -10,7 +10,9 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">🌡️ Energia Térmica</div>
+            <div class="logo">
+                <a href="#" onclick="showSection('inicio')">Energia Térmica</a>
+            </div>
             
             <ul class="nav-links">
                 <li><a href="#" onclick="showSection('inicio')">🏠 Início</a></li>
@@ -213,55 +215,192 @@
                 </div>
             </div>
         </section>
-
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooo -->
         <!-- Página Aplicações -->
         <section id="aplicacao" class="section">
             <h2>🧪 5 Experimentos para Testar em Casa</h2>
             <div class="grid">
-                <div class="experiment-card" onclick="goToSimulator(1)">
+                <div class="experiment-card" onclick="toggleExperiment(this)">
                     <h3>1. Água Quente vs Fria</h3>
                     <p>Misture água quente e fria em copos iguais. Meça as temperaturas finais.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
+                    <div class="extra-content">
+                        <h4>📚 Explicação</h4>
+                            <p>Este experimento demonstra o conceito de equilíbrio térmico.
+                                Quando dois corpos com temperaturas diferentes entram em contato,
+                                o calor flui do corpo mais quente para o mais frio até que ambos
+                                atinjam a mesma temperatura.</p>
+                            <p>A água quente perde energia térmica, enquanto a água fria ganha.
+                                Esse processo acontece naturalmente devido à diferença de temperatura.</p>
+                    <h4>🧪 Materiais</h4>
+                    <ul>
+                        <li>2 copos</li>
+                        <li>Água quente</li>
+                        <li>Água fria</li>
+                        <li>Termômetro (opcional)</li>
+                    </ul>
+                
+                    <h4>📋 Passo a Passo</h4>
+                
+                    <ol>
+                        <li>Encha um copo com água quente.</li>
+                        <li>Encha outro copo com água fria.</li>
+                        <li>Misture as duas águas em um recipiente.</li>
+                        <li>Observe a temperatura final.</li>
+                        <li>Perceba que a temperatura fica intermediária.</li>
+                    </ol>
+                    </div>
+
+
                 </div>
-                <div class="experiment-card" onclick="goToSimulator(2)">
+                <div class="experiment-card" onclick="toggleExperiment(this)">
                     <h3>2. Metal Quente na Água</h3>
                     <p>Coloque um prego quente em água fria. Observe a troca de calor.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
+                    <div class="extra-content">
+                <h4>📚 Explicação</h4>
+
+    <p>
+        O metal aquecido possui grande quantidade de energia térmica.
+        Quando colocado em contato com a água fria, ele transfere calor
+        para ela.
+    </p>
+
+    <p>
+        Isso mostra como os metais são bons condutores térmicos,
+        permitindo a rápida transferência de calor.
+    </p>
+
+    <h4>🧪 Materiais</h4>
+
+    <ul>
+        <li>Colher ou prego metálico</li>
+        <li>Água fria</li>
+        <li>Recipiente</li>
+        <li>Fonte de calor</li>
+    </ul>
+
+    <h4>📋 Passo a Passo</h4>
+
+    <ol>
+        <li>Aqueça cuidadosamente o metal.</li>
+        <li>Coloque água fria em um recipiente.</li>
+        <li>Insira o metal quente na água.</li>
+        <li>Observe a mudança de temperatura.</li>
+        <li>Perceba a transferência de calor.</li>
+    </ol>
+            </div>
                 </div>
-                <div class="experiment-card" onclick="goToSimulator(3)">
+                <div class="experiment-card" onclick="toggleExperiment(this)">
                     <h3>3. Gelo Derretendo</h3>
                     <p>Meça quanto calor é necessário para derreter gelo.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
+                    
+                    <div class="extra-content">
+                <h4>📚 Explicação</h4>
+
+    <p>
+        O gelo precisa absorver energia térmica para mudar do estado
+        sólido para o líquido.
+    </p>
+
+    <p>
+        Esse processo é chamado de fusão e ocorre quando o calor quebra
+        a organização das partículas do gelo.
+    </p>
+
+    <h4>🧪 Materiais</h4>
+
+    <ul>
+        <li>Gelo</li>
+        <li>Copo</li>
+        <li>Água morna</li>
+    </ul>
+
+    <h4>📋 Passo a Passo</h4>
+
+    <ol>
+        <li>Coloque cubos de gelo em um copo.</li>
+        <li>Adicione água morna.</li>
+        <li>Observe o gelo derretendo.</li>
+        <li>Perceba a troca de calor.</li>
+        <li>Veja a mudança de estado físico.</li>
+    </ol>
+            </div>
+            <!-- ooooooooooooooooooooooooooooooooooooooooooooooooo -->
                 </div>
-                <div class="experiment-card" onclick="goToSimulator(4)">
+                <div class="experiment-card" onclick="toggleExperiment(this)">
                     <h3>4. Dilatação da Água</h3>
                     <p>Observe como a água se expande quando aquecida.</p>
-                    <button class="btn">🔗 Ver Simulador</button>
+                    <div class="extra-content">
+                <h4>📚 Explicação</h4>
+
+    <p>
+        Quando a água é aquecida, suas partículas se movimentam mais,
+        aumentando o espaço entre elas.
+    </p>
+
+    <p>
+        Isso provoca a dilatação térmica, ou seja, o aumento de volume
+        da substância devido ao calor.
+    </p>
+
+    <h4>🧪 Materiais</h4>
+
+    <ul>
+        <li>Garrafa</li>
+        <li>Água</li>
+        <li>Recipiente com água quente</li>
+    </ul>
+
+    <h4>📋 Passo a Passo</h4>
+
+    <ol>
+        <li>Encha parcialmente uma garrafa com água.</li>
+        <li>Coloque a garrafa em água quente.</li>
+        <li>Observe o nível da água subir.</li>
+        <li>Perceba a expansão causada pelo calor.</li>
+        <li>Compare com água fria depois.</li>
+    </ol>
+            </div>
+             <!-- ooooooooooooooooooooooooooooooooooooooooooooooooo -->
                 </div>
-                <div class="experiment-card" onclick="goToSimulator(5)">
+                <div class="experiment-card" onclick="toggleExperiment(this)">
                     <h3>5. Isolamento Térmico</h3>
                     <p>Compare copos com e sem isolamento. Qual mantém a temperatura?</p>
-                    <button class="btn">🔗 Ver Simulador</button>
+                    <div class="extra-content">
+                <h4>📚 Explicação</h4>
+
+    <p>
+        Materiais isolantes dificultam a troca de calor com o ambiente.
+        Isso ajuda a manter a temperatura por mais tempo.
+    </p>
+
+    <p>
+        O experimento mostra como recipientes térmicos funcionam no
+        cotidiano.
+    </p>
+
+    <h4>🧪 Materiais</h4>
+
+    <ul>
+        <li>2 copos</li>
+        <li>Papel, tecido ou alumínio</li>
+        <li>Água quente</li>
+    </ul>
+
+    <h4>📋 Passo a Passo</h4>
+
+    <ol>
+        <li>Coloque água quente nos dois copos.</li>
+        <li>Envolva um deles com material isolante.</li>
+        <li>Espere alguns minutos.</li>
+        <li>Compare as temperaturas.</li>
+        <li>Observe qual manteve mais calor.</li>
+    </ol>
+            </div>
+             <!-- ooooooooooooooooooooooooooooooooooooooooooooooooo -->
                 </div>
             </div>
         </section>
 
-        <!-- Página Simulador 
-        <section id="simulador" class="section">
-            <h2>💻 Simulador Interativo</h2>
-            <div id="simulator-content">
-                <div class="simulator-placeholder">
-                    <h3>Selecione um experimento na página anterior ou use os controles abaixo</h3>
-                    <div class="controls">
-                        <button class="btn" onclick="showExperiment(1)">Experimento 1</button>
-                        <button class="btn" onclick="showExperiment(2)">Experimento 2</button>
-                        <button class="btn" onclick="showExperiment(3)">Experimento 3</button>
-                        <button class="btn" onclick="showExperiment(4)">Experimento 4</button>
-                        <button class="btn" onclick="showExperiment(5)">Experimento 5</button>
-                    </div>
-                </div>
-            </div>
-        </section>-->
     </main>
 
     <script src="js/script.js"></script> Link para o arquivo JavaScript 
