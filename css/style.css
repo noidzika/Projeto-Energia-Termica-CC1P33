@@ -49,6 +49,10 @@ body {
     background-clip: text;
     cursor: default;
 }
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
 .nav-links {  
     display: flex;
     list-style: none;
@@ -80,7 +84,6 @@ body {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;   
 }
-
 /** -- Estilos para o botão de informações e modal ----- */
 .info-btn {
     z-index: 1001;
@@ -299,7 +302,6 @@ main {
 .experiment-card:hover {
     transform: scale(1.03);
 }
-
 .experiment-card .extra-content {
     position: absolute;
     top: 100%;
@@ -326,10 +328,10 @@ main {
 }
 .experiment-card.open .extra-content {
     opacity: 1;
-    max-height: 2000px;
+    max-height: 400px;   /* ← altura visível do scroll */
+    overflow-y: auto;    /* ← scroll só no extra-content */
     padding: 1rem 2rem;
 }
-
 .experiment-card.open {
     border-radius: 15px 15px 0 0;
     z-index: 100;
@@ -380,11 +382,9 @@ main {
     margin-bottom: 0.7rem;
 }
 
-/* Materiais */
 
-.extra-content ul li {
-    list-style: "🧪 ";
-}
+
+
 
 
 
@@ -482,14 +482,6 @@ main {
         font-size: 1rem;
     }
 
-}
-
-/* mudanças murilo */
-
-
-.logo a {
-    text-decoration: none;
-    color: inherit;
 }
 
 /* ========================= */

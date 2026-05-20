@@ -12,8 +12,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="#" onclick="showSection('inicio')">Energia Térmica</a>
-            </div>
-            
+            </div>          
             <ul class="nav-links">
                 <li><a href="#" onclick="showSection('inicio')">🏠 Início</a></li>
                 <li><a href="#" onclick="showSection('conceitos')">📚 Conceitos</a></li>
@@ -21,10 +20,8 @@
             </ul>
         </div>
     </nav>
-
     <!-- Botão de Informações -->
     <button class="info-btn" onclick="toggleInfo()">👨‍💻 Info</button>
-
     <!-- Modal de Informações -->
     <div id="infoModal" class="info-modal">
         <div class="info-content">
@@ -38,11 +35,10 @@
             Ulisses daniel teixeira de oliveira </p>
             <p><strong>Objetivo:</strong> 
                 Educar sobre energia térmica de forma interativa</p>
-            <p><strong>Data:</strong> 25/02/2026</p>
+            <p><strong>Ciencia da Computação - 2026</strong></p>
             <p>Um projeto educativo para tornar a física divertida! 🚀</p>
         </div>
     </div>
-
     <main>
         <!-- Página Início -->
         <section id="inicio" class="section active">
@@ -57,26 +53,44 @@
             </div>
 
         </section>
-
         <!-- Página Conceitos -->
         <section id="conceitos" class="section">
             <h2>📚 Conceitos Fundamentais</h2>
             <div class="grid">
-
                 <div id= "toggle1" class="concept-card" onclick="toggleCard(this)">
                     <h3>🔥 Temperatura</h3>
-                    <p>A temperatura é uma grandeza física escalar que indica o grau de agitação dos átomos de um corpo.</p>
+                    <p>A temperatura é uma grandeza física escalar que indica o
+                         grau de agitação dos átomos de um corpo.</p>
                 <!-- -------------------------------------------------------- -->
                 <div class ="extra-content">
-                    <h4><strong>Mais Informações</strong></h4>
+                    <h4>Mais Informações</h4>
                     <p> Quanto maior for a agitação molecular de um corpo maior será a sua temperatura.</p>
-                    <dl>
-                        <dt><strong>Medição:</strong></dt>
-                        <dd>A temperatura é medida pelos termômetros, que podem ser analógicos, digitais ou digitais infravermelhos.</dd>
-                        <dt><strong>Escalas:</strong></dt>
-                        <dd>As escalas termométricas mais empregadas são as escalas Celsius, Fahrenheit e Kelvin.</dd>
-                        <dd>Cada uma empregada para uma determinada aplicação ou por cultura da região.</dd>
-                    </dl>
+                    
+                        
+                        <p>A temperatura quantifica a energia cinética média das partículas de um corpo.</p>
+                        <p>Ou seja: Quanto maior a energia cinética das partículas, maior a temperatura.</p>
+                        <h3>Relação Física</h3>
+                        <h4>📌 O que significa “Energia Cinética Média”?</h4>
+                        <p>Toda partícula encontra-se em constante movimento. Mesmo que um corpo pareça
+                             estar parado macroscopicamente, seus átomos e moléculas continuam vibrando
+                             internamente. Quanto maior for essa movimentação das partículas, maior será
+                             o grau de agitação do sistema e, consequentemente, maior será sua energia
+                             cinética média. A temperatura é justamente a grandeza
+                             física responsável por quantificar essa agitação média das partículas.</p>
+                             <h4> A Energia Cinética Média de um sistema é dada pela equação:</h4>
+                                <p><strong>Para uma única molécula:</strong></p>
+                                <p><strong>ECM = (3/2) * k * T</strong></p>
+                                <p>Onde:</p>
+                                <ul>
+                                    <li>ECM = Energia Cinética Média</li>
+                                    <li>k = Constante de Boltzmann (1.38 x 10^-23 J/K)</li>
+                                    <li>T = Temperatura em Kelvin (K)</li>
+                                </ul>
+                                
+                        <h4>Escalas:</h4>
+                        <p>As escalas termométricas mais empregadas são as escalas Celsius, Fahrenheit e Kelvin.</p>
+                        <p>Cada uma empregada para uma determinada aplicação ou por cultura da região.</p>
+                    
                     <ul>
                         <li>A escala celsius é a mais utilizada no Brasil</li>
                         <li>A escala fahrenheit é utilizada em contextos americanos</li>
@@ -88,19 +102,41 @@
 
                 <div id= "toggle2" class="concept-card" onclick="toggleCard(this)">
                     <h3>🌡️ Calor</h3>
-                    <p>Diferente da temperatura, Calor é a transferência de energia térmica entre corpos que possuem temperaturas diferentes.</p>
+                    <p>Diferente da temperatura, Calor é a transferência de energia 
+                        térmica entre corpos que possuem temperaturas diferentes.</p>
                     <!-- -------------------------------------------------------- -->
                     <div class ="extra-content">
                         <h4>Mais Informações</h4>
-                        <p> Quando dois corpos estão em temperaturas diferentes, a energia naturalmente flui do corpo mais quente para o mais frio. Essa energia em movimento recebe o nome de calor.</p>
+                        <p> Quando dois corpos estão em temperaturas diferentes, a energia naturalmente flui do
+                             corpo mais quente para o mais frio. Essa energia em movimento recebe o nome de calor.</p>
+                             <h4>🔥 Como o calor surge</h4>
+                             <p> Como o calor esta ligado a agitação das particulas, quando um corpo mais quente 
+                                entra em contato com um corpo mais frio, as partículas mais com grau de agitação 
+                                mais elevado elevam o grau de agitação do corpo mais frio. Essa transferencia de 
+                                energia é o que chamamos de calor.</p>
+                                <h3>Relação Física</h3>
+                                <h4>Equilibrio Termico</h4>
+                                <p> A transferencia de calor continua ate que todos os corpos num mesmo sistema alcancem o equilibrio termico.</p>
+                                <p> Esse conceito é conhecido como <i>Lei zero da Termodinâmica.</i></p>
+                                <h4>🧪 Quantidade de calor</h4>
+                                <p>A quantidade de calor (Q) transferida é calculada pela fórmula:</p>
+                                <p><strong>Q = m * c * ΔT</strong></p>
+                                <p>Onde:</p>
+                                <ul>
+                                    <li>Q = Quantidade de calor transferida</li>
+                                    <li>m = Massa do corpo</li>
+                                    <li>c = Capacidade calorífica do material</li>
+                                    <li>ΔT = Variação de temperatura (Tfinal - Tinicial)</li>
+                                </ul>
+                                
+                                <h4>🔥Transferência de Calor</h4>
                         <dl class ="dl-2">
-                            <dt><strong>Transferência de Calor</strong></dt>
-                            <h4>O calor pode ser transmitido de três maneiras principais:</h4>
+                            <dt><strong>O calor pode ser transmitido de três maneiras principais:</strong></dt>
                             <dd><strong>Condução:</strong> Transferência de calor por contato direto entre os corpos.</dd>
                             <dd><strong>Convecção:</strong> Movimentação de partículas em líquidos e gases.</dd>
                             <dd><strong>Radiação:</strong> Propagação de energia por ondas eletromagnéticas, sem necessidade de contato.</dd>
                         </dl>
-                        <h4><strong>Unidade de medida</strong></h4>
+                        <h4>Unidade de medida</h4>
                         <p>No Sistema Internacional, o calor é medido em Joules (J), <br> mas também pode ser representado em calorias (cal).</p>
                     </div>
                     <!-- -------------------------------------------------------- -->
@@ -108,25 +144,26 @@
                 
                 <div id= "toggle3" class="concept-card" onclick="toggleCard(this)">
                     <h3>💧 Capacidade Calorífica</h3>
-                    <p>A capacidade calorífica é a grandeza física que indica a quantidade de calor necessária para variar a temperatura de um corpo em 1°C.</p>
+                    <p>A capacidade calorífica é a grandeza física que indica a quantidade de 
+                        calor necessária para variar a temperatura de um corpo em 1°C.</p>
                     <!-- -------------------------------------------------------- -->
                     <div class ="extra-content" >
                         <h4>Mais Informações</h4>
-                        <p> Cada material reage de maneira diferente ao receber calor. Alguns aquecem rapidamente, enquanto outros precisam de uma quantidade maior de energia térmica para aumentar sua temperatura.</p>
-                        <dl class = "dl-2">
-                            <dt><strong>A capacidade calorífica depende:</strong></dt>
-                            <dd>- Da massa do corpo</dd>
-                            <dd>- Do material que o compõe</dd>
-                            <dd>- Da quantidade de energia recebida</dd>
-                        </dl>
-                        <h3>Comportamento dos materiais</h3>
+                        <p> Cada material reage de maneira diferente ao receber calor. Alguns aquecem rapidamente, 
+                            enquanto outros precisam de uma quantidade maior de energia térmica para aumentar sua temperatura.</p>
+                        <p>A capacidade calorifica quantifica a quantidade de calor necessária para aumentar a temperatura de um corpo</p>
+                        <h3>Relação Física</h3>
+                        <h4>A capacidade calorífica depende:</h4>
+                            <ul>
+                                <li>- Da massa do corpo</li>
+                                <li>- Do material que o compõe</li>
+                                <li>- Da quantidade de energia recebida</li>
+                            </ul>
+                        <h4>Comportamento dos materiais</h4>
                         <p>Corpos com baixa capacidade calorífica aquecem e esfriam rapidamente.</p>
                         <p>Corpos com alta capacidade calorífica demoram mais para variar sua temperatura.</p>
-                        <h3>Unidade de Medida</h3>
-                        <p>No Sistema Internacional, a capacidade calorífica é medida em:</p>
-                        <p>J/°C (Joules por grau Celsius), ou</p>
-                        <p>cal/g°C (calorias por grama por grau Celsius)</p>
-                        <h3>Relação Física</h3>
+                        
+                        
                         <p>A capacidade calorífica relaciona a quantidade de calor recebida com a variação de temperatura:</p>
                         <p><strong>C = Q / ΔT</strong></p>
                         <h4>Onde:</h4>
@@ -136,6 +173,10 @@
                             <li>ΔT = variação de temperatura</li>
                         </ul>
                     
+                        <h3>Unidade de Medida</h3>
+                        <p>No Sistema Internacional, a capacidade calorífica é medida em:</p>
+                        <p>J/°C (Joules por grau Celsius), ou</p>
+                        <p>cal/g°C (calorias por grama por grau Celsius)</p>
                     
                     </div>
                     <!-- -------------------------------------------------------- -->
@@ -156,7 +197,8 @@
                             quanto num líquido ou no estado gasoso.</p>
                         <p> Na maiorioria dos materiais, a dilatação térmica é 
                             proporcional à variação de temperatura.</p>
-                        <h3>Tipos de dilatação térmica</h3>
+                        <h3>Relação Física</h3>
+                        <h4>Tipos de dilatação térmica</h4>
                         <p>A dilatação térmica pode ocorrer de três maneiras: linearmente,
                              superficialmente e volumetricamente.</p>
                         <p>- Dilatação Linear: aumento da comprimento de um corpo.</p>
@@ -188,28 +230,40 @@
                             <li>V0 é o volume inicial do corpo medida em metros cúbicos(m³)</li>
                             <li>ΔT é a variação de temperatura </li>
                         </ul>
-                        
-                        
-                        
-                            <dl>
-                            <dt><strong>Informações4</strong></dt>
-                            <dd>...</dd>
-                        </dl>
+                            <p> 📌 Diferente dos outros conceitos termodinamicos, a dilatação térmica para os outros
+                                conceitos é que ela não descreve diretamente a energia térmica ou a agitação das
+                                partículas, mas sim os efeitos físicos causados pelo aumento dessa agitação.</p>
                     </div>
                     <!-- -------------------------------------------------------- -->
                 </div>
                 
                 <div id= "toggle4" class="concept-card" onclick="toggleCard(this)">
                     <h3>📈 Ponto de Fusão/Ebulição</h3>
-                    <p>Temperaturas nas quais ocorrem mudanças de estado (sólido↔líquido↔gasoso).</p>
+                    <p>Os pontos de fusão e ebulição representam as temperaturas específicas em que uma substância muda de estado físico.</p>
                     <!-- -------------------------------------------------------- -->
                     <div class ="extra-content" >
                         <h4>Mais Informações</h4>
-                        <p> Quanto maior a agitação molecular maior será a temperatura do corpo</p>
-                        <dl>
-                            <dt><strong>Informações5</strong></dt>
-                            <dd>...</dd>
-                        </dl>
+                        <p> Todo material possui um ponto de fusão e um ponto de ebulição específicos, 
+                            pois cada substância apresenta diferentes forças de interação entre suas 
+                            partículas. À medida que a temperatura aumenta, cresce também a agitação 
+                            molecular e a energia cinética média das partículas. Quando essa agitação 
+                            atinge um determinado nível, a matéria começa a mudar de estado físico. </p>
+                            <h4>🧊 Ponto de Fusão</h4>
+                            
+                        <p>O ponto de fusão é a temperatura na qual uma substância passa do estado 
+                            sólido para o estado líquido. Nesse processo, as partículas do sólido 
+                            ganham energia suficiente para superar as forças de atração que as mantêm 
+                            organizadas, permitindo que se movam mais livremente como um líquido.</p>
+                        <p>O ponto de fusão é característico de cada substância e pode ser influenciado
+                             por fatores como pressão e pureza do material.</p>
+                        <h4> 💨Ponto de Ebulição</h4>
+                        <p>O ponto de ebulição é a temperatura na qual uma substância passa do estado 
+                            líquido para o estado gasoso. Nesse processo, as partículas do líquido 
+                            ganham energia suficiente para superar as forças de atração que as mantêm 
+                            unidas, permitindo que se movam livremente como um gás.</p>
+                        <p>Assim como o ponto de fusão, o ponto de ebulição é característico de cada 
+                            substância e pode ser influenciado por fatores como pressão e pureza do material.</p>
+                        <h3>Relação Física</h3>
                     </div>
                     <!-- -------------------------------------------------------- -->
                 </div>
