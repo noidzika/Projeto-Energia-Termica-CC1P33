@@ -16,30 +16,31 @@ function toggleInfo() {
 function toggleCard(card) {
     document.querySelectorAll('.concept-card')
         .forEach(item => {
-
             if(item !== card) {
-                item.classList.remove('on');
-               
+                item.classList.remove('on');              
             }
-
         });
     card.classList.toggle('on');
-
 }
-
 // Expandir cards de aplicação
 function toggleExperiment(card) {
-
     document.querySelectorAll('.experiment-card')
         .forEach(item => {
-
             if (item !== card) {
                 item.classList.remove('open');
             }
-
         });
-
     card.classList.toggle('open');
+}
+// Expandir conteudo extra dos cards de sustentabilidade
+function toggleSustentability(card) {
+    document.querySelectorAll('.sustentability-card')
+        .forEach(item => {
+            if(item !== card) {
+                item.classList.remove('show'); 
+            }
+        });
+    card.classList.toggle('show');
 }
 
 
