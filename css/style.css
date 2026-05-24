@@ -122,7 +122,7 @@ body {
     height: 100%;
 }
 
-.info-content {
+.info-1 {
     background: white;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     
@@ -250,56 +250,35 @@ main {
 /* =============================== */
 /* TEXTO DOS CARDS APLICAÇÃO  */
 /* =============================== */
-.experiment-card {
+.experiment-card{
     position: relative;
     z-index: 1;
-
+    
     background: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
+    
     padding: 2rem;
     border-radius: 15px;
-
     text-align: center;
-    transition: all 0.3s ease ;
-    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: pointer;   
 }
 .experiment-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
-.experiment-card.open {
-    border-radius: 15px 15px 0 0;
-    z-index: 100;
-}
-.experiment-card .extra-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    z-index: 100;
-
-    overflow: hidden;
-    opacity: 0;
-
-    background: white;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-
-    width: 100%;
-    max-height: 0;
-
-    border-radius: 0 0 15px 15px;
-
-    transition:
-        max-height 0.5s ease,
-        opacity 0.3s ease;
-
-    padding: 0 2rem;
+.experiment-card.open{
+    z-index: 100; /* ← fica por cima dos outros cards */
+    border-radius: 15px 15px 0 0; /* Remove o arredondamento inferior do card */
+    
 }
 .experiment-card.open .extra-content {
     opacity: 1;
+    padding: 1rem 2rem;     
     max-height: 400px;   /* ← altura visível do scroll */
     overflow-y: auto;    /* ← scroll só no extra-content */
-    padding: 1rem 2rem;
+}
+.experiment-card.open .experiment-card:hover {
+    transform: none; /* Desativa o efeito de hover quando o conteúdo extra está visível */
 }
 /* =============================== */
 /* =============================== */
@@ -424,7 +403,12 @@ main {
     background-color: #727477;
     color: #ffffff;
 }
-
+.info-content{
+    background-color:rgba(62, 62, 103, 0.112);
+    box-shadow: inset 0px 4px 10px rgba(51, 51, 51, 0.122);
+    border-radius: 13px;
+    padding: 1rem
+}
 /* =============================== */
 /* =============================== */
 
