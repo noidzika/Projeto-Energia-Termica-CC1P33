@@ -344,6 +344,11 @@ main {
 /* =============================== */
 /* Conteudo escondido dos cards*/
 /* =============================== */
+.concept-card h3, .experiment-card h3, .sustentability-card h3 {
+    color: #1f3b46;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
 .extra-content {    
     position: absolute;
     top: 100%; /* aparece logo abaixo do card */
@@ -355,7 +360,7 @@ main {
     background: white;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
     
-    padding: 2rem;
+   
     width: 100%;
     border-radius: 0 0 15px 15px;
     max-height: 0; /* Esconde o conteúdo */
@@ -364,10 +369,6 @@ main {
         max-height 0.5s ease,
         opacity 0.3s ease;
     cursor:default;
-}
-.extra-content ul li {
-    text-align: left;
-    margin-bottom: 0.5rem;
 }
 .extra-content h4 {
     color: #1f3b46;
@@ -381,21 +382,26 @@ main {
 .extra-content p {
     color: #444;
 
-    margin-bottom: 1rem;
+    padding: 0.3rem;
+    border-radius: 8px;
+ 
 
     line-height: 1.7;
     text-align: left;
 }
-.extra-content ul,
-.extra-content ol {
+.extra-content ul, .extra-content ol {
     padding-left: 1.5rem;
     margin-bottom: 1rem;
 
-    text-align: left;
+    text-align: left;    
 }
 .extra-content li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
+}
+.extra-content ul li {
+    text-align: left;
+    margin-bottom: 0.5rem;
 }
 .extra-content ol li {
     background: rgba(31, 59, 70, 0.05);
@@ -405,6 +411,20 @@ main {
 
     margin-bottom: 0.7rem;
 }
+.extra-content a {
+    color: #1f3b46;
+    background: rgba(31, 59, 70, 0.174);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem;
+    transition: background-color 0.3s ease;
+}
+.extra-content a:hover {
+    background-color: #727477;
+    color: #ffffff;
+}
+
 /* =============================== */
 /* =============================== */
 
@@ -428,11 +448,7 @@ main {
 /* =============================== */
 /* =============================== */
 
-.concept-card h3, .experiment-card h3, .sustentability-card h3 {
-    color: #1f3b46;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
+
 
 
 
