@@ -476,19 +476,7 @@ main {
         font-size: 1.6rem;
         text-align: center;
     }
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    .nav-links li {
-        padding: 0.4rem 0.7rem;
-    }
-    .nav-links a {
-        font-size: 0.95rem;
-        padding: 0.3rem 0.5rem;
-    }
+
     /* CONTEÚDO */
     main {
         margin-top: 140px;
@@ -560,9 +548,7 @@ main {
     .logo {
         font-size: 1.3rem;
     }
-    .nav-links a {
-        font-size: 0.8rem;
-    }
+   
     .concept-card h3, .experiment-card h3, .sustentability-card h3 {
         font-size: 1.1rem;
     }
@@ -582,7 +568,7 @@ main {
 .btn-mobile {
     display: none;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (max-width: 600px) and (max-width: 400px) {
      .navbar .nav-links {
         display: none;
     }
@@ -612,7 +598,7 @@ main {
             display: block;
             padding: 1rem;
             border-radius:25px; 
-            animation: fadeIn 0.8s ease-in;
+            animation: fadeIn 0.5s ease-in;
             }
         & li {
             transition: all 0.3s ease;
