@@ -1,117 +1,110 @@
-```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-
 body {
     color: #333;
     background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-
+    
     min-height: 100vh;
-    overflow-x: hidden;
+    min-width: 600px;
 }
 
-/* ========================= */
-/* NAVBAR */
-/* ========================= */
-
+/** -- Estilos para a barra de navegação ----- */
 .navbar {
     position: fixed;
     top: 0;
     z-index: 1000;
-
+    
     background: rgba(255, 255, 255, 0.55);
     box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     backdrop-filter: blur(3px);
-
+    
     display: flex;
     padding: 1rem 0;
     width: 100%;
     border-radius: 0 0 20px 20px;
-}
 
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
     align-items: center;
-
+    
     max-width: 1200px;
     padding: 0 2rem;
-    margin: 0 auto;
 }
-
 .logo {
     background: linear-gradient(45deg, #10212b 0%, #1f3b46 50%, #2d5d6f 100%);
     font-size: 2rem;
     font-weight: bold;
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    cursor: default;
 }
-
 .logo a {
     text-decoration: none;
     color: inherit;
 }
-
-.nav-links {
+.nav-links {  
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-
 .nav-links li {
+    flex-grow: 1;
     transition: all 0.3s ease;
-
+    
     padding: 0.5rem 1rem;
     border-radius: 25px;
+    cursor: none;
 }
-
 .nav-links li:hover {
     background: linear-gradient(45deg, #10212b 0%, #1f3b46 50%, #2d5d6f 100%);
+    border-radius: 25px;   
 }
-
-.nav-links li:hover a {
+.nav-links li:hover a{
     color: white;
+    transform: translateY(-2px);
+    cursor: none;
 }
-
-.nav-links a {
+.nav-links a {   
     color: #333;
 
     font-weight: 500;
     text-decoration: none;
-
-    transition: all 0.3s ease;
+    
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;   
 }
-
-/* ========================= */
-/* BOTÃO INFO */
-/* ========================= */
-
+/** -- Estilos para o botão de informações e modal ----- */
 .info-btn {
     z-index: 1001;
     position: fixed;
     right: 20px;
     bottom: 20px;
-
+    
     background: linear-gradient(45deg, #10212b 0%, #1f3b46 50%, #2d5d6f 100%);
     color: white;
     border: none;
-
+    
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
-
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    
 }
 
 .info-btn:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transform: scale(1.05);
 }
 
@@ -120,10 +113,10 @@ body {
     top: 0;
     left: 0;
     z-index: 1002;
-
+    
     background: rgba(0,0,0,0.8);
     backdrop-filter: blur(5px);
-
+    
     display: none;
     width: 100%;
     height: 100%;
@@ -132,14 +125,11 @@ body {
 .info-1 {
     background: white;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-
+    
     padding: 2rem;
     margin: 10% auto;
     border-radius: 20px;
-
     max-width: 500px;
-    width: 90%;
-
     text-align: center;
 }
 
@@ -150,170 +140,215 @@ body {
     cursor: pointer;
 }
 
-/* ========================= */
-/* MAIN */
-/* ========================= */
-
+/** -- Estilos para o conteúdo principal ----- */
 main {
-    margin-top: 100px;
+    margin-top: 80px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-
     padding: 2rem;
 }
-
 .hero {
     background: rgba(255,255,255,0.9);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
-    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+   
+    padding: 4rem 0;
     border-radius: 20px;
-
     text-align: center;
 }
-
 .hero h1 {
     background: linear-gradient(45deg, #10212b 0%, #1f3b46 50%, #2d5d6f 100%);
-
+    
     margin-bottom: 1rem;
     font-size: 3.5rem;
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
 .hero-text {
     color: #666;
     font-size: 1.3rem;
-
     max-width: 800px;
     margin: 0 auto;
 }
-
 .section {
     background: rgba(255,255,255,0.9);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
+   
     display: none;
-
     padding: 3rem;
     border-radius: 20px;
     margin-bottom: 2rem;
 }
-
 .section.active {
     display: block;
-    animation: fadeIn 0.6s ease;
+    animation: fadeIn 0.8s ease-in;
 }
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
 .section h2 {
-    text-align: center;
+    color: #333;
     margin-bottom: 2rem;
     font-size: 2.5rem;
+    text-align: center;
 }
-
-/* ========================= */
-/* GRID */
-/* ========================= */
-
-.grid {
+.grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    align-items: start;
+    margin-top: 2rem;
+    align-items: start;   
 }
+/* =============================== */
+/* =============================== */
 
-/* ========================= */
-/* CARDS */
-/* ========================= */
-
-.concept-card,
-.experiment-card,
-.sustentability-card {
+/* =============================== */
+/* Estilos para os cards de conceitos*/
+/* =============================== */
+.concept-card{
+    position: relative;
+    z-index: 1;
+    
     background: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
+    
     padding: 2rem;
     border-radius: 15px;
-
+    text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: pointer;   
+}
+.concept-card:hover {
+    transform: scale(1.05);
+}
+.concept-card.on{
+    z-index: 100; /* ← fica por cima dos outros cards */
+    border-radius: 15px 15px 0 0; /* Remove o arredondamento inferior do card */
+    
+}
+.dl-2 dd{
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+.concept-card.on .extra-content {
+    opacity: 1;
+    padding: 1rem 2rem;     
+    max-height: 400px;   /* ← altura visível do scroll */
+    overflow-y: auto;    /* ← scroll só no extra-content */
+}
+.concept-card.on .concept-card:hover {
+    transform: none; /* Desativa o efeito de hover quando o conteúdo extra está visível */
+}
+/* =============================== */
+/* =============================== */
 
+
+
+/* =============================== */
+/* TEXTO DOS CARDS APLICAÇÃO  */
+/* =============================== */
+.experiment-card{
     position: relative;
-    overflow: hidden;
+    z-index: 1;
+    
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;   
 }
+.experiment-card:hover {
+    transform: scale(1.05);
+}
+.experiment-card.open{
+    z-index: 100; /* ← fica por cima dos outros cards */
+    border-radius: 15px 15px 0 0; /* Remove o arredondamento inferior do card */
+    
+}
+.experiment-card.open .extra-content {
+    opacity: 1;
+    padding: 1rem 2rem;     
+    max-height: 400px;   /* ← altura visível do scroll */
+    overflow-y: auto;    /* ← scroll só no extra-content */
+}
+.experiment-card.open .experiment-card:hover {
+    transform: none; /* Desativa o efeito de hover quando o conteúdo extra está visível */
+}
+/* =============================== */
+/* =============================== */
 
-.concept-card:hover,
-.experiment-card:hover,
+/* =============================== */
+/* TEXTO DOS CARDS SUSTENTABILIDADE */
+/* =============================== */
+.sustentability-card{
+    position: relative;
+    z-index: 1;
+    
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;   
+}
 .sustentability-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
+.sustentability-card.show{
+    z-index: 100; /* ← fica por cima dos outros cards */
+    border-radius: 15px 15px 0 0; /* Remove o arredondamento inferior do card */
+    
+}
+.sustentability-card.show .extra-content {
+    opacity: 1;
+    padding: 1rem 2rem;     
+    max-height: 400px;   /* ← altura visível do scroll */
+    overflow-y: auto;    /* ← scroll só no extra-content */
+}
+.sustentability-card.show .sustentability-card:hover {
+    transform: none; /* Desativa o efeito de hover quando o conteúdo extra está visível */
+}
+/* =============================== */
+/* =============================== */
 
-.concept-card h3,
-.experiment-card h3,
-.sustentability-card h3 {
+
+/* =============================== */
+/* Conteudo escondido dos cards*/
+/* =============================== */
+.concept-card h3, .experiment-card h3, .sustentability-card h3 {
     color: #1f3b46;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
-
-/* ========================= */
-/* EXTRA CONTENT */
-/* ========================= */
-
-.extra-content {
-    overflow: hidden;
-
-    opacity: 0;
-    max-height: 0;
-
-    background: rgba(62, 62, 103, 0.08);
-
-    border-radius: 15px;
-
+.extra-content {    
+    position: absolute;
+    top: 100%; /* aparece logo abaixo do card */
+    left: 0;
+    z-index: 100; /* ← fica por cima dos outros cards */
+    overflow: hidden; /* Esconde o conteúdo extra */
+    opacity: 0; /* Deixa o conteúdo invisível */
+    
+    background: white;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
+    
+   
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    max-height: 0; /* Esconde o conteúdo */
+    
     transition:
         max-height 0.5s ease,
-        opacity 0.3s ease,
-        padding 0.3s ease;
-
-    padding: 0 1rem;
-    margin-top: 1rem;
+        opacity 0.3s ease;
+    cursor:default;
 }
-
-/* ABRIR */
-
-.concept-card.on .extra-content,
-.experiment-card.open .extra-content,
-.sustentability-card.show .extra-content {
-    opacity: 1;
-    max-height: 1500px;
-    padding: 1rem;
-}
-
-/* ========================= */
-/* TEXTO */
-/* ========================= */
-
-.info-content {
-    background: rgba(255,255,255,0.5);
-    border-radius: 12px;
-    padding: 1rem;
-}
-
 .extra-content h4 {
     color: #1f3b46;
 
@@ -321,26 +356,32 @@ main {
     margin-bottom: 0.8rem;
 
     font-size: 1.1rem;
+    text-align: left;
 }
-
 .extra-content p {
     color: #444;
 
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
+    padding: 0.3rem;
+    border-radius: 8px;
+ 
 
-.extra-content ul,
-.extra-content ol {
+    line-height: 1.7;
+    text-align: left;
+}
+.extra-content ul, .extra-content ol {
     padding-left: 1.5rem;
     margin-bottom: 1rem;
-}
 
+    text-align: left;    
+}
 .extra-content li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
 }
-
+.extra-content ul li {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
 .extra-content ol li {
     background: rgba(31, 59, 70, 0.05);
 
@@ -349,171 +390,230 @@ main {
 
     margin-bottom: 0.7rem;
 }
-
 .extra-content a {
     color: #1f3b46;
+    background: rgba(31, 59, 70, 0.174);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem;
+    transition: background-color 0.3s ease;
 }
+.extra-content a:hover {
+    background-color: #727477;
+    color: #ffffff;
+}
+.info-content{
+    background-color:rgba(62, 62, 103, 0.112);
+    box-shadow: inset 0px 4px 10px rgba(51, 51, 51, 0.122);
+    border-radius: 13px;
+    padding: 1rem
+}
+/* =============================== */
+/* =============================== */
 
-/* ========================= */
-/* SCROLL */
-/* ========================= */
-
+/* =============================== */
+/* SCROOL CUSTOMIZADO PARA CONTEUDO ESCONDIDO DOS CARDS */
+/* =============================== */
 .extra-content::-webkit-scrollbar {
     width: 6px;
 }
-
-.extra-content::-webkit-scrollbar-thumb {
-    background: #aaa;
+.extra-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 10px;
 }
-
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
-
-@media screen and (max-width: 900px) {
-
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.7rem;
-    }
-
-    .section {
-        padding: 2rem;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
+.extra-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
 }
+.extra-content::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+/* =============================== */
+/* =============================== */
 
-/* ========================= */
-/* CELULAR */
-/* ========================= */
+
+
+
 
 @media screen and (max-width: 600px) {
-
     .navbar {
         padding: 1rem;
     }
-
     .nav-container {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
-
-        text-align: center;
+        gap: 1rem;        
     }
-
-    .logo {
-        font-size: 1.7rem;
-    }
-
     .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .nav-links li {
-        padding: 0.4rem 0.8rem;
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    main {
-        margin-top: 150px;
-        padding: 1rem;
-    }
-
-    .section {
-        padding: 1.5rem 1rem;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text {
-        font-size: 1rem;
-    }
-
-    .concept-card,
-    .experiment-card,
-    .sustentability-card {
-        padding: 1.2rem;
-    }
-
-    .concept-card h3,
-    .experiment-card h3,
-    .sustentability-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .extra-content {
-        padding: 0 0.5rem;
-    }
-
-    .info-btn {
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
+        gap: 1px;  
     }
 }
-
-/* ========================= */
-/* CELULARES PEQUENOS */
-/* ========================= */
-
-@media screen and (max-width: 400px) {
-
-    .logo {
-        font-size: 1.3rem;
+@media screen and (max-width: 600px) {
+    .extra-content {
+        font-size: 0.95rem;
     }
+    .extra-content h4 {
+        font-size: 1rem;
+    }
+}
+/* ========================= */
 
+
+/* ========================= */
+/* RESPONSIVIDADE TABLETS */
+/* ========================= */
+@media screen and (max-width: 900px) {
+    body {
+        min-width: 100%;
+    }
+    main {
+        padding: 1rem;
+    }
+    .section {
+        padding: 2rem 1.5rem;
+    }
+    .hero {
+        padding: 3rem 1.5rem;
+    }
     .hero h1 {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
-
-    .section h2 {
-        font-size: 1.5rem;
+    .hero-text {
+        font-size: 1.1rem;
     }
-
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .hero-text,
-    .concept-card p,
-    .experiment-card p,
-    .sustentability-card p {
-        font-size: 0.9rem;
-    }
-
     .grid {
         grid-template-columns: 1fr;
     }
+    .concept-card,
+    .experiment-card {
+        width: 100%;
+    }
 }
-```
+/* ========================= */
+
+
+/* ========================= */
+/* RESPONSIVIDADE CELULARES */
+/* ========================= */
+@media screen and (max-width: 600px) {
+    body {
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 1rem;
+        border-radius: 0 0 15px 15px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+    }
+    .logo {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .nav-links li {
+        padding: 0.4rem 0.7rem;
+    }
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    /* CONTEÚDO */
+    main {
+        margin-top: 140px;
+        padding: 0.8rem;
+    }
+    .section {
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .hero {
+        padding: 2rem 1rem;
+        border-radius: 15px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* CARDS */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .concept-card,
+    .experiment-card,
+    .sustentability-card {
+        padding: 1.5rem 1rem;
+    }
+    .concept-card h3,
+    .experiment-card h3,
+    .sustentability-card h3 {
+        font-size: 1.3rem;
+    }
+    .extra-content {
+        padding: 1rem;
+    }
+
+    /* BOTÃO INFO */
+    .info-btn {
+        right: 15px;
+        bottom: 15px;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* MODAL */
+    .info-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 1.5rem;
+    }
+}
+/* ========================= */
+
+
+
+/* ========================= */
+/* CELULARES MUITO PEQUENOS */
+/* ========================= */
+@media screen and (max-width: 400px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    .concept-card h3, .experiment-card h3, .sustentability-card h3 {
+        font-size: 1.1rem;
+    }
+    .hero-text, .concept-card p, .experiment-card p, .sustentability-card p {
+        font-size: 0.9rem;
+    }
+}
+/* ========================= */
+/* ========================= */
