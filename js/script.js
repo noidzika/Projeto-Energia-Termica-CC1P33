@@ -21,6 +21,7 @@ function toggleCard(card) {
             }
         });
     card.classList.toggle('on');
+    
 }
 // Expandir cards de aplicação
 function toggleExperiment(card) {
@@ -42,6 +43,48 @@ function toggleSustentability(card) {
         });
     card.classList.toggle('show');
 }
+function toggleMenu() {
+    const navMobile = document.getElementById('nav-mobile');
+    navMobile.classList.toggle('open');
+}
+// ========================================
+
+// Fecha cards ao clicar fora
+document.addEventListener('click', function(event) {
+
+    // Cards de conceitos ====================
+    if (!event.target.closest('.concept-card')) {
+        document.querySelectorAll('.concept-card').forEach(c => c.classList.remove('on'));
+    }
+    // ======================================== 
+
+    // Cards de aplicação ====================
+    if (!event.target.closest('.experiment-card')) {
+        document.querySelectorAll('.experiment-card').forEach(c => c.classList.remove('open'));
+    }
+    // ======================================== 
+
+    // Cards de sustentabilidade ===============
+    if (!event.target.closest('.sustentability-card')) {
+        document.querySelectorAll('.sustentability-card').forEach(c => c.classList.remove('show'));
+    }
+    // ======================================== 
+
+    // Menu mobile — fecha se clicar fora do menu E fora do botão
+    if (!event.target.closest('#nav-mobile') && !event.target.closest('.btn-mobile')) {
+        document.getElementById('nav-mobile').classList.remove('open');
+    }
+    // =======================================================
+});
+// ============================================================= 
+// Reseta estado ao voltar para a página
+window.addEventListener('pageshow', function() {
+    document.querySelectorAll('.concept-card').forEach(c => c.classList.remove('on'));
+    document.querySelectorAll('.experiment-card').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.sustentability-card').forEach(c => c.classList.remove('show'));
+    document.getElementById('nav-mobile').classList.remove('open');
+});
+//=================================================================
 
 
 
